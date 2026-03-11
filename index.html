@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Fahri</title>
+
+<link rel="icon" href="img/logo2.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+
+  <div class="loader-box">
+    <div class="main-container">
+      <div class="loader">
+        <svg viewBox="0 0 800 500">
+          <g id="traces">
+          <path d="M100 100 H200 V210 H326" class="trace-bg"></path>
+          <path d="M100 100 H200 V210 H326" class="trace-flow purple"></path>
+
+          <path d="M80 180 H180 V230 H326" class="trace-bg"></path>
+          <path d="M80 180 H180 V230 H326" class="trace-flow blue"></path>
+
+          <path d="M60 260 H150 V250 H326" class="trace-bg"></path>
+          <path d="M60 260 H150 V250 H326" class="trace-flow yellow"></path>
+
+          <path d="M100 350 H200 V270 H326" class="trace-bg"></path>
+          <path d="M100 350 H200 V270 H326" class="trace-flow green"></path>
+
+          <path d="M700 90 H560 V210 H474" class="trace-bg"></path>
+          <path d="M700 90 H560 V210 H474" class="trace-flow blue"></path>
+
+          <path d="M740 160 H580 V230 H474" class="trace-bg"></path>
+          <path d="M740 160 H580 V230 H474" class="trace-flow green"></path>
+
+          <path d="M720 250 H590 V250 H474" class="trace-bg"></path>
+          <path d="M720 250 H590 V250 H474" class="trace-flow red"></path>
+
+          <path d="M680 340 H570 V270 H474" class="trace-bg"></path>
+          <path d="M680 340 H570 V270 H474" class="trace-flow yellow"></path>
+
+          </g>
+
+          <rect
+            x="330"
+            y="190"
+            width="140"
+            height="100"
+            rx="20"
+            ry="20"
+            fill="#111"
+            stroke="#333"
+            stroke-width="3" />
+          <text
+            x="400"
+            y="240"
+            text-anchor="middle"
+            fill="#fafdff"
+            font-size="22"
+            font-family="Arial">
+            SYSTEM
+          </text>
+        </svg>
+      </div>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text">
+        <span id="progressNumber">0</span>%
+      </div>
+      <p class="loading-text" id="loadingText">
+        Initializing Portfolio...
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="container nav">
+   <div class="logo">
+  <img src="img/logo2.svg" alt="Logo">
+  <span class="name">Fahri<span class="dev">.Dev</span></span>
+</div>
+<div class="hamburger" id="hamburger">
+      <span></span> 
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home">
+  <div class="container hero">
+    <div class="hero-left">
+  <p class="welcome">HELLO, I'M</p>
+  <h1 id="">Muhammad Fahri Rangkuti</h1>
+  <h3>Student & <span>Web Developer</span></h3>
+  <p class="desc"><b>
+  <span id="typing"></span></b></p>
+  <div class="social-icons">
+   <a href="https://discord.com/users/Fahri#1234"><i class="fa-brands fa-discord discord-icon"></i></a>
+    <a href="https://github.com/Fahri0007"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/d0doyy_/"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@d0odooyy"><i class="fa-brands fa-tiktok"></i></a>
+  </div>
+</div>
+
+  <div class="hero-animation">
+
+<lottie-player
+src="animasi/cat.json"
+background="transparent"
+speed="1"
+style="width:420px;height:420px"
+loop
+autoplay>
+</lottie-player>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-flex">
+    <div class="about-left">
+      <h2>Tentang <span>Saya</span></h2>
+    </div>
+
+    <div class="about-right">
+      <p>
+        Saya <b>Muhammad Fahri Rangkuti</b>, seorang pelajar yang memiliki ketertarikan kuat di bidang Web Development. 
+        Saat ini saya fokus mempelajari dan mengembangkan website modern menggunakan 
+        HTML, CSS, JavaScript, serta PHP & MySQL. Selain itu, saya juga mempelajari 
+        Android Studio untuk pengembangan aplikasi mobile, sehingga dapat membuat solusi digital 
+        baik untuk web maupun perangkat mobile. Dalam proses belajar, saya juga sesekali 
+        memanfaatkan AI untuk membantu memahami teknologi dan mempercepat proses eksplorasi.
+
+        Saya terus berusaha meningkatkan kemampuan melalui berbagai proyek, eksperimen, 
+        dan eksplorasi teknologi terbaru di dunia pengembangan web dan aplikasi, agar dapat 
+        membangun lebih banyak solusi digital yang bermanfaat bagi banyak orang.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="center">Pengalaman <span>Saya</span></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="card">
+          <h3>Lomba Kompetensi Siswa (LKS) tingkat Kabupaten Deli Serdang tahun 2025</h3>
+          <p class="date"> 11 Juni 2025</p>
+          <p>Menjadi salah satu peserta LKS dalam bidang Web Technologies.
+             Peserta diuji kemampuannya dalam desain antarmuka (front-end) menggunakan
+             HTML, CSS, dan JavaScript, serta pengembangan sistem disisi server/logika 
+             (back-end) menggunakan bahasa pemrograman PHP, dan Framework Laravel, serta basis data MySQL.
+             Fokusnya adalah membangun website yang responsif, fungsional, dan memiliki estetika visual yang baik.
+          </p>
+        </div>
+      </div>
+
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="card">
+        <h3>Mengikuti Seminar Acara Google I/O Extended Medan</h3>
+        <p class="date">12 Juli 2025</p>
+        <p>Pembahasan utama berfokus pada revolusi Gemini AI
+          yang kini semakin canggih melalui model 1.5 Pro dan Flash,
+          di mana teknologi ini memungkinkan pengembang mengintegrasikan kecerdasan buatan langsung ke dalam aplikasi web dan mobile dengan lebih cepat.
+          </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="card">
+        <h3>Mengikuti Seminar Acara Developer Festival Medan</h3>
+        <p class="date">22 November 2025</p>
+        <p>Membahas topik utama "Building Safe, Secure and Scalable Solutions with AI and Cloud". Topik tersebut berfokus pada pengembangan solusi teknologi masa depan yang aman dan terukur. Acara ini memanfaatkan kecerdasan buatan dan infrastruktur awan. Konferensi teknologi tahunan ini diselenggarakan oleh Google Developer Group (GDG) Medan, bekerja sama dengan Universitas IBBI, pada November 2025. Konferensi ini menampilkan seminar, talk show, dan workshop hands-on. Sesi-sesi tersebut dibawakan oleh para ahli industri dan Google Developer Experts.
+          </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container center">
+    <h2>Programming <span>Skills</span></h2>
+
+    <div class="skill-group">
+
+      <div class="skill-card">
+        <i class="devicon-html5-plain colored"></i>
+        <p>HTML</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="devicon-css3-plain colored"></i>
+        <p>CSS</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="devicon-javascript-plain colored"></i>
+        <p>JavaScript</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="devicon-php-plain colored"></i>
+        <p>PHP</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="devicon-mysql-plain colored"></i>
+        <p>MySQL</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="devicon-bootstrap-plain colored"></i>
+        <p>Bootstrap</p>
+      </div>
+
+    </div>
+
+    <h2 style="margin-top:80px;">Tools & <span>Software</span></h2>
+
+    <div class="skill-group">
+
+      <div class="skill-card">
+        <i class="devicon-vscode-plain colored"></i>
+        <p>VS Code</p>
+      </div>
+      
+     <div class="skill-card">
+      <img src="img/xampp1.svg" alt="XAMPP" class="xampp-icon">
+      <p>XAMPP</p>
+    </div>
+      
+      <div class="skill-card">
+        <i class="devicon-git-plain colored"></i>
+        <p>Git</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="devicon-github-plain github-icon"></i>
+        <p>GitHub</p>
+      </div>
+
+      <div class="skill-card">
+           <img src="img/microsoft.svg" width="50">
+        <p>Microsoft</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <img src="img/projek1.png" alt="project">
+
+        <div class="project-content">
+          <h3>Sistem Ticketing Kereta Api</h3>
+          <p>
+            Aplikasi berbasis PHP dan MySQL dengan fitur login multilevel,
+            pemesanan tiket dan pembayaran.
+          </p>
+
+          <div class="tech">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Bootstrap</span>
+          </div>
+
+          <a href="https://github.com/Fahri0007">
+          <button class="slice">
+            <span class="text">View</span>
+          </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <img src="img/projek2.png" alt="project">
+
+        <div class="project-content">
+          <h3>Aplikasi Peminjaman Barang</h3>
+          <p>
+            Sistem manajemen peminjaman barang dengan dashboard admin
+            dan fitur CRUD data.
+          </p>
+
+          <div class="tech">
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+
+          <a href="https://github.com/Fahri0007">
+          <button class="slice">
+            <span class="text">View</span>
+          </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <img src="img/projek3.png" alt="project">
+
+        <div class="project-content">
+          <h3>Website Class</h3>
+          <p>
+            Website kelas berisi informasi kelas, struktur organisasi,
+            dan dokumentasi kegiatan.
+          </p>
+
+          <div class="tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+          <a href="https://github.com/Fahri0007/web-class">
+          <button class="slice">
+            <span class="text">View</span>
+          </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container center">
+    <h2>Let's <span>Connect</span></h2>
+    <p>Silakan hubungi saya melalui platform dibawah ini...</p>
+
+    <div class="skill-group">
+
+      <div class="skill-card">
+        <a href="https://wa.me/6282280352927">
+          <i class="fa-brands fa-whatsapp wa-icon"></i>
+          <p>WhatsApp</p>
+        </a>
+      </div>
+
+      <div class="skill-card">
+        <a href="https://instagram.com/d0doyy_">
+          <i class="fa-brands fa-instagram ig-icon"></i>
+          <p>Instagram</p>
+        </a>
+      </div>
+
+      <div class="skill-card">
+        <a href="https://discord.com/users/doyz">
+          <i class="fa-brands fa-discord discord-icon"></i>
+          <p>Discord</p>
+        </a>
+      </div>
+
+      <div class="skill-card">
+        <a href="https://t.me/Dodoy">
+          <i class="fa-brands fa-telegram telegram-icon"></i>
+          <p>Telegram</p>
+        </a>
+      </div>
+
+      <div class="skill-card">
+        <a href="https://twitter.com/Dodoy_kecee">
+          <i class="fa-brands fa-x-twitter x-icon"></i>
+          <p>X</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h2>Fahri<span>.Dev</span></h2>
+      <p>
+        Web Developer yang fokus membuat website modern,
+        responsive, dan user friendly menggunakan
+        HTML, CSS, JavaScript, PHP, dan MySQL.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-links">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Email: fahrirkt7@gmail.com</p>
+      <p>Instagram: @d0doyy_</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="https://github.com/Fahri0007"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/d0doyy_/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@d0odooyy"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Fahri.dev | All Rights Reserved</p>
+  </div>
+</footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+ScrollReveal({
+  distance: '60px',
+  duration: 1200,
+  delay: 200,
+  easing: 'ease-in-out',
+  reset: false
+});
+
+ScrollReveal().reveal('.hero-left', { origin: 'left' });
+ScrollReveal().reveal('.hero-right', { origin: 'right' });
+ScrollReveal().reveal('.about-left', { origin: 'left' });
+ScrollReveal().reveal('.about-right', { origin: 'right' });
+ScrollReveal().reveal('.timeline-item', { origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.skill-card', { origin: 'bottom', interval: 120 });
+ScrollReveal().reveal('.project-card', { origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('footer', { origin: 'bottom' });
+
+
+// ================= SECTION FADE (.show CLASS) =================
+const allSections = document.querySelectorAll("section");
+
+function revealSection() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  allSections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerBottom) {
+      section.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSection);
+window.addEventListener("load", revealSection);
+
+
+// ================= NAVBAR ACTIVE LINK =================
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav ul li a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.clientHeight;
+
+    if (window.pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+
+});
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector(".nav ul");
+const navLinksMobile = document.querySelectorAll(".nav ul li a");
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+navLinksMobile.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
+});
+
+// ================= NAVBAR SHRINK =================
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+var typed = new Typed("#typing", {
+  strings: ["Selamat datang di Website Portfolio Fahri"],
+  typeSpeed: 50,
+  showCursor: true,
+  loop: true
+});
+let progress = 0;
+
+let text = [
+"Initializing Portfolio...",
+"Loading Assets...",
+"Connecting Modules...",
+"Launching Interface..."
+];
+
+let interval = setInterval(function(){
+
+  progress++;
+
+  document.getElementById("progressNumber").innerText = progress;
+  document.getElementById("progressFill").style.width = progress + "%";
+
+  if(progress == 25){
+    document.getElementById("loadingText").innerText = text[1];
+  }
+
+  if(progress == 55){
+    document.getElementById("loadingText").innerText = text[2];
+  }
+
+  if(progress == 85){
+    document.getElementById("loadingText").innerText = text[3];
+  }
+
+  if(progress >= 100){
+
+    clearInterval(interval);
+
+    setTimeout(function(){
+
+      document.getElementById("loader").style.opacity="0";
+
+      setTimeout(function(){
+        document.getElementById("loader").style.display="none";
+      },500);
+
+    },500);
+
+  }
+
+},80);
+
+</script>
+</body>
+</html>
