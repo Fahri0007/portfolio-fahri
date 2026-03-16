@@ -594,17 +594,25 @@ let interval = setInterval(function(){
   }
 
 },80);
-  document.onkeydown = function(e) {
-    if (e.keyCode == 123) {
-      return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'I'.charCodeAt(0)){
-      return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-      return false;
+  document.addEventListener('keydown', function(e) {
+
+  if (e.key === "F12") {
+    e.preventDefault();
   }
-  };
+
+  if (e.ctrlKey && e.shiftKey && e.key === "I") {
+    e.preventDefault();
+  }
+
+  if (e.ctrlKey && e.shiftKey && e.key === "J") {
+    e.preventDefault();
+  }
+
+  if (e.ctrlKey && e.key === "U") {
+    e.preventDefault();
+  }
+
+});
 </script>
 </body>
 </html>
