@@ -340,6 +340,11 @@ header.scrolled{
   margin-bottom:10px;}
 
 /* ================= BUTTON ================= */
+.hero-buttons{
+  margin-top:20px;
+  display:flex;
+  gap:15px;
+}
 .btn-primary{
   background:#d4a017;
   color:black;
@@ -370,6 +375,7 @@ header.scrolled{
   background:#d4a017;
   color:black;
 }
+
 
 /* ================= SOCIAL ================= */
 .social-icons{
@@ -501,11 +507,75 @@ header.scrolled{
 .section-title{
   text-align: center;
 }
+
+/* GRID */
 .project-grid{
   margin-top:50px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
+  grid-template-columns: repeat(1, 1fr);
+  gap:16px;
+}
+
+/* DESKTOP */
+@media (min-width:768px){
+  .project-grid{
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .project-card.big{
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .project-card.small{
+    grid-column: span 1;
+    grid-row: span 1;
+    
+  }
+
+  .project-card.tall{
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+/* KHUSUS CARD KECIL */
+.project-card.small .project-content{
+  padding:10px;
+}
+
+/* SEMUA CARD TEXT KECIL */
+.project-content{
+  padding:10px;
+}
+
+/* JUDUL */
+.project-content h3{
+  font-size:13px;
+  margin-bottom:3px;
+}
+
+/* DESKRIPSI */
+.project-content p{
+  font-size:11px;
+  line-height:1.3;
+}
+
+/* TECH */
+.project-content .tech{
+  margin:6px 0 10px;
+}
+
+.project-content .tech span{
+  font-size:9px;
+  padding:2px 6px;
+}
+
+/* BUTTON */
+.project-content .slice{
+  font-size:11px;
+  padding:6px 12px;
+  border-radius:10px;
 }
 
 /* CARD */
@@ -515,68 +585,94 @@ header.scrolled{
   border-radius:20px;
   overflow:hidden;
   border:1px solid #333;
-  transition:0.4s;
+  transition:0.4s ease;
 }
 
 /* GAMBAR */
 .project-card img{
   width:100%;
-  height:230px;
+  height:100%;
   object-fit:cover;
-  transition:0.6s;
-}
-
-/* OVERLAY */
-.project-content{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.75);
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-
-  padding:25px;
-  color:white;
-
-  opacity:0;
-  transform:translateY(20px);
-  transition:0.4s;
+  display:block;
+  z-index:1;
+  transition:0.5s;
+  filter: grayscale(100%) brightness(0.8);
 }
 
 /* HOVER */
 .project-card:hover img{
-  transform:scale(1.1);
+  filter: grayscale(0%) brightness(1);
+  transform:scale(1.05);
 }
 
 .project-card:hover{
-  transform:translateY(-12px);
-  border-color:#d4a017;
-  box-shadow:0 0 25px rgba(212,160,23,0.4);
+  transform:scale(1.02);
+  z-index:5;
+}
+
+/* OVERLAY */
+.project-content{
+  z-index:2;
+  position:absolute;
+  inset:0;
+  padding:20px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  background:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.556),
+    rgba(0, 0, 0, 0.76),
+    transparent
+  );
+
+  color:white;
+
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.4s ease;
+
+  pointer-events:none;
 }
 
 .project-card:hover .project-content{
   opacity:1;
   transform:translateY(0);
+  pointer-events:auto;
 }
 
-/* TECH TAG */
+/* TEXT */
+.project-content h3{
+  margin-bottom:5px;
+}
+
+.project-content p{
+  font-size:14px;
+  opacity:0.85;
+  pointer-events:none;
+}
+
+/* BUTTON */
+.project-content .slice{
+  margin-top:10px;
+}
+
+/* TECH */
 .tech{
-  margin:10px 0 15px 0;
+  margin:10px 0 15px;
 }
 
 .tech span{
-  background:#d4a017;
-  color:#000;
+  background:rgba(255, 255, 255, 0.15);
+  color:#ffb700;
   font-size:12px;
-  padding:4px 8px;
-  border-radius:5px;
+  padding:4px 10px;
+  border-radius:20px;
   margin:3px;
   display:inline-block;
 }
-
 /* TOMBOL SLICE */
 .slice{
   --c1:#202020;
@@ -785,6 +881,15 @@ footer{
   justify-content:center;
 }
 
+
+  .project-card,
+  .project-card.big{
+    grid-column: span 12;
+  }
+
+  .project-card.big img{
+    height:230px;
+  }
 }
 /* ================= FOOTER ================= */
 .footer{
