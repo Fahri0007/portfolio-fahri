@@ -504,6 +504,12 @@ header.scrolled{
   margin-bottom:15px;
 }
 /* ================= PROJECT ================= */
+#projects p {
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff; 
+  font-size: 16px;
+}
 .section-title{
   text-align: center;
 }
