@@ -112,31 +112,38 @@
 <section id="home">
   <div class="container hero">
     <div class="hero-left">
-  <p class="welcome">HELLO, I'M</p>
-  <h1 id="">Muhammad Fahri Rangkuti</h1>
-  <h3>Student & <span>Web Developer</span></h3>
-  <p class="desc"><b>
-  <span id="typing"></span></b></p>
-  <div class="social-icons">
-   <a href="https://discord.com/users/Fahri#1234"><i class="fa-brands fa-discord discord-icon"></i></a>
-    <a href="https://github.com/Fahri0007"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.instagram.com/d0doyy_/"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@d0odooyy"><i class="fa-brands fa-tiktok"></i></a>
+      <p class="welcome">HELLO, I'M</p>
+      <h1>Muhammad Fahri Rangkuti</h1>
+      <h3>Student & <span>Web Developer</span></h3>
+      <p class="desc">
+        <b><span id="typing"></span></b>
+      </p>
+      <div class="hero-buttons">
+       <a href="#projects"><button class="slice">
+      <span class="text">View Project</span></button></a>
+       <a href="#contact"><button class="slice">
+      <span class="text">Contact Me</span></button></a>
+      </div>
+      <!-- SOCIAL -->
+      <div class="social-icons">
+        <a href="https://discord.com"><i class="fa-brands fa-discord discord-icon"></i></a>
+        <a href="https://github.com/Fahri0007"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/d0doyy_/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@d0odooyy"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="hero-animation">
+      <lottie-player
+        src="animasi/cat.json"
+        background="transparent"
+        speed="1"
+        style="width:420px;height:420px"
+        loop
+        autoplay>
+      </lottie-player>
+    </div>
+
   </div>
-</div>
-
-  <div class="hero-animation">
-
-<lottie-player
-src="animasi/cat.json"
-background="transparent"
-speed="1"
-style="width:420px;height:420px"
-loop
-autoplay>
-</lottie-player>
-
-</div>
 </section>
 
 <!-- ABOUT -->
@@ -287,45 +294,49 @@ autoplay>
 
     <div class="project-grid">
 
-      <!-- PROJECT 1 -->
-      <div class="project-card">
-        <img src="img/projek1.png" alt="project">
+<!-- PROJECT 1 -->
 
-        <div class="project-content">
-          <h3>Sistem Ticketing Kereta Api</h3>
-          <p>
-            Aplikasi berbasis PHP dan MySQL dengan fitur login multilevel,
-            pemesanan tiket dan pembayaran.
-          </p>
+ <div class="project-card big">
 
-          <div class="tech">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>Bootstrap</span>
-          </div>
+  <img src="img/projek1.png" alt="project">
 
-          <a href="https://github.com/Fahri0007">
+  <div class="project-content">
+
+    <h3>Sistem Ticketing Kereta Api</h3>
+
+    <p>
+      Aplikasi berbasis PHP dan MySQL dengan fitur login multilevel,
+      pemesanan tiket dan pembayaran.
+    </p>
+
+    <div class="tech">
+      <span><b>PHP</span>
+      <span>MySQL</span>
+      <span>Bootstrap</b></span>
+    </div>
+
+    <a href="https://github.com/Fahri0007/web-class">
           <button class="slice">
             <span class="text">View</span>
           </button>
           </a>
-        </div>
-      </div>
-
+  </div>
+</div>
       <!-- PROJECT 2 -->
-      <div class="project-card">
+       <div class="project-card small">
         <img src="img/projek2.png" alt="project">
 
         <div class="project-content">
-          <h3>Aplikasi Peminjaman Barang</h3>
+          <h3>Peminjaman Barang</h3>
           <p>
             Sistem manajemen peminjaman barang dengan dashboard admin
             dan fitur CRUD data.
           </p>
 
           <div class="tech">
-            <span>PHP</span>
+            <span><b>PHP</span>
             <span>MySQL</span>
+            <span>Bootstrap</b></span>
           </div>
 
           <a href="https://github.com/Fahri0007">
@@ -335,9 +346,8 @@ autoplay>
           </a>
         </div>
       </div>
-
       <!-- PROJECT 3 -->
-      <div class="project-card">
+      <div class="project-card tall">
         <img src="img/projek3.png" alt="project">
 
         <div class="project-content">
@@ -348,9 +358,33 @@ autoplay>
           </p>
 
           <div class="tech">
-            <span>HTML</span>
+            <span><b>HTML</span>
             <span>CSS</span>
-            <span>JavaScript</span>
+            <span>JavaScript</b></span>
+          </div>
+
+          <a href="https://github.com/Fahri0007/web-class">
+          <button class="slice">
+            <span class="text">View</span>
+          </button>
+          </a>
+        </div>
+      </div>
+      <!-- PROJECT 4 -->
+      <div class="project-card small">
+        <img src="img/projek4.png" alt="project">
+
+        <div class="project-content">
+          <h3>Website Class</h3>
+          <p>
+            Website kelas berisi informasi kelas, struktur organisasi,
+            dan dokumentasi kegiatan.
+          </p>
+
+          <div class="tech">
+            <span><b>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</b></span>
           </div>
 
           <a href="https://github.com/Fahri0007/web-class">
@@ -594,6 +628,7 @@ let interval = setInterval(function(){
   }
 
 },80);
+
 </script>
 </body>
 </html>
