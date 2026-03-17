@@ -525,7 +525,7 @@ header.scrolled{
   margin-top:50px;
   display:grid;
   grid-template-columns: repeat(1, 1fr);
-  gap:16px;
+  gap:14px;
 }
 
 /* DESKTOP */
