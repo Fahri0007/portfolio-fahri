@@ -577,10 +577,16 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 50);
 });
 var typed = new Typed("#typing", {
-  strings: ["Selamat datang di Website Portfolio Fahri"],
-  typeSpeed: 50,
-  showCursor: true,
-  loop: true
+    strings: [
+        "Selamat datang di Website Portfolio Fahri"
+    ],
+    typeSpeed: 50,
+    startDelay: 300,
+    backSpeed: 20,
+    backDelay: 3000,
+    loop: true,
+    smartBackspace: true,
+    cursorChar: "|"
 });
 let progress = 0;
 
