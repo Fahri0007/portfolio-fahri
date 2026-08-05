@@ -116,7 +116,7 @@
       <h1>Muhammad Fahri Rangkuti</h1>
       <h3>Student & <span>Web Developer</span></h3>
       <p class="desc">
-        <b><span id="typing"></span></b>
+          <b><span id="welcomeText"></span></b>
       </p>
       <div class="hero-buttons">
        <a href="#projects"><button class="slice">
@@ -132,16 +132,16 @@
         <a href="https://www.tiktok.com/@d0odooyy"><i class="fa-brands fa-tiktok"></i></a>
       </div>
     </div>
-    <div class="hero-animation">
-      <lottie-player
+   <div class="hero-animation desktop-only">
+    <lottie-player
         src="animasi/cat.json"
         background="transparent"
         speed="1"
         style="width:420px;height:420px"
         loop
         autoplay>
-      </lottie-player>
-    </div>
+    </lottie-player>
+</div>
 
   </div>
 </section>
@@ -487,15 +487,40 @@
         <a href="https://www.tiktok.com/@d0odooyy"><i class="fa-brands fa-tiktok"></i></a>
       </div>
     </div>
-
   </div>
 
   <div class="footer-bottom">
     <p>© 2026 Fahri.dev | All Rights Reserved</p>
   </div>
 </footer>
+
+   <!-- Scroll To Top -->
+<div class="indicator" id="scrollTop">
+
+    <!-- Wave Belakang -->
+    <div class="wave wave-back"></div>
+
+    <!-- Wave Depan -->
+    <div class="wave wave-front"></div>
+
+    <!-- Panah -->
+    <div class="arrow">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+
+            <path
+                d="M12 18V6M12 6L6 12M12 6L18 12"
+                stroke="white"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+
+        </svg>
+
+    </div>
+
+</div>
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
 ScrollReveal({
   distance: '60px',
@@ -506,7 +531,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.hero-left', { origin: 'left' });
-ScrollReveal().reveal('.hero-right', { origin: 'right' });
+ScrollReveal().reveal('.hero-animation', { origin: 'right' });
 ScrollReveal().reveal('.about-left', { origin: 'left' });
 ScrollReveal().reveal('.about-right', { origin: 'right' });
 ScrollReveal().reveal('.timeline-item', { origin: 'bottom', interval: 200 });
@@ -571,69 +596,150 @@ navLinksMobile.forEach(link => {
   });
 });
 
+const texts = [
+    "Welcome to My Portfolio",
+    "Hi, I'm Muhammad Fahri",
+    "Software Engineering Student",
+    "Passionate Web Developer",
+    "Building Modern Websites",
+    "Thanks for Visiting"
+];
+
+const textElement = document.getElementById("welcomeText");
+
+let index = 0;
+
+function changeText(){
+
+    textElement.classList.remove("show");
+
+    setTimeout(()=>{
+
+        textElement.textContent = texts[index];
+
+        textElement.classList.add("show");
+
+        index++;
+
+        if(index >= texts.length){
+            index = 0;
+        }
+
+    },600);
+
+}
+
+changeText();
+
+setInterval(changeText,3000);
 // ================= NAVBAR SHRINK =================
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   header.classList.toggle("scrolled", window.scrollY > 50);
 });
-var typed = new Typed("#typing", {
-    strings: [
-        "Selamat datang di Website Portfolio Fahri"
-    ],
-    typeSpeed: 50,
-    startDelay: 300,
-    backSpeed: 20,
-    backDelay: 3000,
-    loop: true,
-    smartBackspace: true,
-    cursorChar: "|"
-});
 let progress = 0;
 
-let text = [
-"Initializing Portfolio...",
-"Loading Assets...",
-"Connecting Modules...",
-"Launching Interface..."
+const text = [
+    "Initializing Portfolio...",
+    "Loading Assets...",
+    "Connecting Modules...",
+    "Launching Interface..."
 ];
 
-let interval = setInterval(function(){
+const progressNumber = document.getElementById("progressNumber");
+const progressFill = document.getElementById("progressFill");
+const loadingText = document.getElementById("loadingText");
+const loader = document.getElementById("loader");
 
-  progress++;
+let interval = setInterval(() => {
 
-  document.getElementById("progressNumber").innerText = progress;
-  document.getElementById("progressFill").style.width = progress + "%";
+    progress += 2; // Naik 2% setiap interval
 
-  if(progress == 25){
-    document.getElementById("loadingText").innerText = text[1];
-  }
+    if (progress > 100) {
+        progress = 100;
+    }
 
-  if(progress == 55){
-    document.getElementById("loadingText").innerText = text[2];
-  }
+    progressNumber.innerText = progress;
+    progressFill.style.width = progress + "%";
 
-  if(progress == 85){
-    document.getElementById("loadingText").innerText = text[3];
-  }
+    if (progress >= 25 && progress < 55) {
+        loadingText.innerText = text[1];
+    }
 
-  if(progress >= 100){
+    if (progress >= 55 && progress < 85) {
+        loadingText.innerText = text[2];
+    }
 
-    clearInterval(interval);
+    if (progress >= 85) {
+        loadingText.innerText = text[3];
+    }
 
-    setTimeout(function(){
+    if (progress >= 100) {
 
-      document.getElementById("loader").style.opacity="0";
+        clearInterval(interval);
 
-      setTimeout(function(){
-        document.getElementById("loader").style.display="none";
-      },500);
+        setTimeout(() => {
 
-    },500);
+            loader.classList.add("loader-hide");
 
-  }
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 300);
 
-},80);
+        }, 200);
+    }
 
+},105);
+
+const indicator = document.getElementById("scrollTop");
+
+let progressCurrent = 0;
+let target = 0;
+
+function updateProgress() {
+
+    const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    target = (window.scrollY / maxScroll) * 100;
+
+    // Batasi antara 0 - 100
+    target = Math.max(0, Math.min(100, target));
+
+    // Tombol muncul setelah scroll 200px
+    if (window.scrollY > 200) {
+        indicator.classList.add("show");
+    } else {
+        indicator.classList.remove("show");
+    }
+}
+
+window.addEventListener("scroll", updateProgress);
+
+function animate() {
+
+    // Semakin kecil nilainya semakin halus
+progressCurrent += (target - progressCurrent) * 0.06;
+
+indicator.style.setProperty(
+    "--completion",
+    progressCurrent + "%"
+);
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();
+
+indicator.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
 </script>
 </body>
 </html>
