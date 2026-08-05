@@ -10,25 +10,48 @@ html{
 }
 
 /* Welcome Text Animation */
-
 #welcomeText{
-    display: inline-block;
-    opacity: 0;
-    filter: blur(12px);
-    transform: translateY(15px) scale(.96);
 
-    transition:
-        opacity .8s ease,
-        filter .8s ease,
-        transform .8s ease;
+    opacity:0;
+    filter:blur(10px);
+    transform:translateY(10px);
 
-    will-change: opacity, filter, transform;
+    transition:.6s ease;
 }
 
 #welcomeText.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0) scale(1);
+
+    opacity:1;
+    filter:blur(0);
+    transform:translateY(0);
+
+}
+@keyframes welcomeAnimation{
+
+    0%{
+        opacity:0;
+        filter:blur(10px);
+        transform:translateY(12px);
+    }
+
+    15%{
+        opacity:1;
+        filter:blur(0);
+        transform:translateY(0);
+    }
+
+    85%{
+        opacity:1;
+        filter:blur(0);
+        transform:translateY(0);
+    }
+
+    100%{
+        opacity:0;
+        filter:blur(10px);
+        transform:translateY(-12px);
+    }
+
 }
 body{
     font-family:'Poppins',sans-serif;
